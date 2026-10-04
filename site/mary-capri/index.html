@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Buenos días, Mary</title>
+<style>
+:root{--ink:#20374b;--muted:#6d7d8a;--coral:#ef7f73;--gold:#f5be62;--sea:#78c9df}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:linear-gradient(#fff5e9,#f7fbfd 46%,#eaf7fa);overflow-x:hidden}
+.hero{min-height:100vh;display:grid;place-items:center;position:relative;padding:28px}
+.sun{position:absolute;top:7vh;right:8vw;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#fff7bd 0 34%,#ffd27b 58%,transparent 72%);filter:drop-shadow(0 0 22px #ffc46a88)}
+.card{position:relative;z-index:2;width:min(720px,94vw);padding:36px 24px;border-radius:30px;background:#ffffffcc;backdrop-filter:blur(12px);box-shadow:0 25px 70px #31556a22;text-align:center}
+.kicker{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:#7d8b95;font-weight:700}
+h1{font:600 clamp(2.7rem,8vw,5.5rem)/.98 Georgia,serif;margin:.5rem 0;color:#20374b}.capri{color:var(--coral);font-style:italic}
+.lead{max-width:590px;margin:18px auto 24px;color:#596d7c;line-height:1.75;font-size:1.08rem}
+.btn{border:0;border-radius:999px;padding:14px 22px;font:700 1rem system-ui;color:white;background:linear-gradient(135deg,var(--coral),#ffb15e);box-shadow:0 10px 28px #ef7f7344;cursor:pointer}
+.wave{position:absolute;left:0;right:0;bottom:0;height:34vh;background:linear-gradient(#9fdff0,#58afc2);clip-path:ellipse(78% 55% at 50% 100%)}
+.wrap{width:min(980px,92vw);margin:auto}section{padding:72px 0}.title{text-align:center;font:600 clamp(2rem,5vw,3rem) Georgia,serif;margin:0 0 10px}.sub{text-align:center;color:var(--muted);margin:0 auto 28px;max-width:620px;line-height:1.65}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.mini{position:relative;min-height:245px;padding:24px;border-radius:24px;background:#ffffffdc;box-shadow:0 14px 40px #31556a14;overflow:hidden}.mini h3{margin:.6rem 0}.mini p{color:#627685;line-height:1.65}.cover{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:22px;background:linear-gradient(145deg,#fff,#fff7ef);transition:.4s;cursor:pointer}.cover.open{opacity:0;pointer-events:none;transform:scale(.96)}
+.msgbox,.note{background:#ffffffdd;border-radius:28px;padding:30px;box-shadow:0 18px 55px #31556a14;text-align:center}.msgbox{margin-top:24px}.message{font:500 clamp(1.5rem,4vw,2.25rem)/1.45 Georgia,serif;max-width:760px;margin:10px auto 22px}.choices{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}.choice{border:1px solid #e4ebef;background:white;border-radius:999px;padding:10px 14px;cursor:pointer}.note{max-width:760px;margin:auto}.note p{color:#526979;line-height:1.9;font-size:1.08rem}.sig{font:1.35rem Georgia,serif;color:#d96f64}.heartbtn{width:62px;height:62px;border:0;border-radius:50%;font-size:1.7rem;background:white;box-shadow:0 8px 25px #c96d6d22;cursor:pointer}.heart{position:fixed;pointer-events:none;z-index:30;animation:rise 1.7s ease-out forwards}@keyframes rise{to{opacity:0;transform:translateY(-150px) scale(1.4)}}footer{text-align:center;color:#8998a3;padding:28px 12px 44px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.sun{width:120px;height:120px;right:-15px}.hero{padding:18px}.card{padding:30px 20px}}
+</style>
+</head>
+<body>
+<section class="hero">
+<div class="sun"></div><div class="wave"></div>
+<div class="card">
+<div class="kicker">un pequeño buenos días para ti</div>
+<h1>Buenos días,<br><span class="capri">Mary ☀️</span></h1>
+<p class="lead">No quería mandarte solo un “buenos días”. Quería dejarte un pequeño rincón bonito para empezar el día con una sonrisa, sin prisas y sin expectativas.</p>
+<button class="btn" onclick="document.querySelector('#mensajes').scrollIntoView()">Ábrelo a tu ritmo ✨</button>
+</div>
+</section>
+
+<section id="mensajes"><div class="wrap">
+<h2 class="title">Tres cosas para recordar hoy</h2>
+<p class="sub">Toca cada tarjeta. Prometo que no hay examen al final 😌</p>
+<div class="grid">
+<div class="mini"><div style="font-size:2rem">🌤️</div><h3>Tu forma de ser</h3><p>Las personas interesantes no tienen que estar “encendidas” todo el tiempo. También me gusta descubrir tus silencios, tus pausas y tus días tranquilos.</p><div class="cover" onclick="this.classList.add('open')"><div><div style="font-size:2.3rem">🌤️</div><b>Tócame</b><br><small>hay algo detrás</small></div></div></div>
+<div class="mini"><div style="font-size:2rem">🌊</div><h3>Sin presión</h3><p>No necesito que seas de una forma específica conmigo. Prefiero ir conociéndote como eres, poco a poco, y dejar que las cosas tengan su propio ritmo.</p><div class="cover" onclick="this.classList.add('open')"><div><div style="font-size:2.3rem">🌊</div><b>Otra pequeña verdad</b><br><small>toca para abrir</small></div></div></div>
+<div class="mini"><div style="font-size:2rem">✨</div><h3>Y sobre aburrirme...</h3><p>No estoy aquí buscando entretenimiento constante. Si sigo teniendo ganas de conocerte es precisamente porque hay algo en ti que me da curiosidad y me gusta.</p><div class="cover" onclick="this.classList.add('open')"><div><div style="font-size:2.3rem">✨</div><b>Esta es importante</b><br><small>tócala sin miedo</small></div></div></div>
+</div>
+<div class="msgbox">
+<div class="kicker">elige tu mensaje de hoy</div>
+<p id="m" class="message">“Hoy solo quiero que tengas un día bonito.”</p>
+<div class="choices">
+<button class="choice" onclick="show(0)">Suave ☁️</button>
+<button class="choice" onclick="show(1)">Coqueto 🌸</button>
+<button class="choice" onclick="show(2)">Cariñoso 💛</button>
+<button class="choice" onclick="show(3)">Capri 🌊</button>
+</div>
+</div>
+</div></section>
+
+<section><div class="wrap"><div class="note">
+<h2 class="title">Un mensaje que quería dejarte</h2>
+<p>Mary, no sé exactamente a dónde nos llevará esto y tampoco quiero ponerle prisa. Solo sé que me gusta conocerte. Me gusta descubrir poco a poco lo que te hace reír, lo que te cuesta decir, las cosas que te emocionan y también esos momentos en los que prefieres guardar un poco de distancia.</p>
+<p>Y si algún día vuelve esa idea de que podría aburrirme de ti, recuerda algo sencillo: no tienes que hacer méritos para mantener mi interés. Si estoy aquí, es porque quiero estar.</p>
+<p>Así que por hoy, nada complicado: que desayunes rico, que algo te salga mejor de lo que esperabas y que en algún momento del día te acuerdes de que alguien quiso hacerte sonreír esta mañana.</p>
+<div class="sig">Buenos días, Capri. ☀️</div><br>
+<button class="heartbtn" onclick="hearts(event)">💛</button>
+</div></div></section>
+<footer>Hecho para Mary, con calma, cariño y un poquito de mar 🌊</footer>
+<script>
+const msgs=[
+"“Hoy solo quiero que tengas un día bonito.”",
+"“Dato innecesariamente importante: hoy amaneciste oficialmente invitada a sonreír al menos una vez pensando en mí.”",
+"“No tienes que demostrarme nada hoy. Solo sé tú, que con eso ya tengo suficiente curiosidad para seguir conociéndote.”",
+"“Si pudiera mandarte un pedacito de Capri esta mañana, sería mar tranquilo, sol suave y cero prisa.”"
+];
+function show(i){const e=document.getElementById('m');e.style.opacity=0;setTimeout(()=>{e.textContent=msgs[i];e.style.opacity=1},160)}
+function hearts(e){for(let i=0;i<7;i++){const h=document.createElement('div');h.className='heart';h.textContent=['💛','✨','🌸','☀️'][Math.floor(Math.random()*4)];h.style.left=(e.clientX+Math.random()*80-40)+'px';h.style.top=(e.clientY+Math.random()*20-10)+'px';document.body.appendChild(h);setTimeout(()=>h.remove(),1800)}}
+</script>
+</body>
+</html>
